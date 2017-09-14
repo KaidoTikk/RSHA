@@ -1,0 +1,10 @@
+#!/bin/bash
+kasutajanimi=$1
+useradd $kasutajanimi -m -s /bin/bash
+if [ $? -eq 0 ]; then
+ echo "Kasutja nimega $kasutajanimi on lisatud süsteemi"
+ls -la /home/$kasutajanimi
+else
+ echo "probleem kasutaja $kasutajanimi lisamisega"
+ fi
+
